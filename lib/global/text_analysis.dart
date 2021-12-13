@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart';
 
-const String baseUri = 'http://10.6.10.148:5000/';
+const String baseUri = 'http://192.168.223.228:5000/';
 
 Future sentimentAnalysis(String route, String toAnalyze) async {
   Response response = await post(

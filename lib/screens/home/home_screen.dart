@@ -147,30 +147,32 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 30.0),
               if (_textsOcr.isNotEmpty)
-                _separateText
-                    ? Expanded(
-                        child: ListView(
-                          children: _textsOcr
-                              .map(
-                                (ocrText) => OcrTextWidget(ocrText),
-                              )
-                              .toList(),
-                        ),
-                      )
-                    : Builder(
-                        builder: (context) {
-                          String concatenated = '';
-                          for (OcrText text in _textsOcr) {
-                            concatenated += text.value + ' ';
-                          }
-                          return OcrTextWidget(
-                            OcrText(
-                              concatenated,
-                              language: _textsOcr.first.language,
+                Expanded(
+                  child: ListView(
+                    children: _separateText
+                        ? _textsOcr
+                            .map(
+                              (ocrText) => OcrTextWidget(ocrText),
+                            )
+                            .toList()
+                        : [
+                            Builder(
+                              builder: (context) {
+                                String concatenated = '';
+                                for (OcrText text in _textsOcr) {
+                                  concatenated += text.value + ' ';
+                                }
+                                return OcrTextWidget(
+                                  OcrText(
+                                    concatenated,
+                                    language: _textsOcr.first.language,
+                                  ),
+                                );
+                              },
                             ),
-                          );
-                        },
-                      ),
+                          ],
+                  ),
+                ),
             ],
           ),
         ),
