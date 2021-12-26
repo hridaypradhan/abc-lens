@@ -52,8 +52,9 @@ def summarize_text():
     average = int(sum_values / len(sentence_scores))
 
     summary = ''
+    threshold = 1.2
     for sentence in sentences:
-        if (sentence in sentence_scores) and (sentence_scores[sentence] > (1.2 * average)):
+        if (sentence in sentence_scores) and (sentence_scores[sentence] > (threshold * average)):
             summary += " " + sentence
 
     json_file = {'summary': summary}
