@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:flutter_mobile_vision_2/flutter_mobile_vision_2.dart';
-import 'package:text_analyzer/screens/home/widgets/ocr_text_widget.dart';
+import 'widgets/ocr_text_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   static const id = 'home_screen';

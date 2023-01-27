@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:flutter_mobile_vision_2/flutter_mobile_vision_2.dart';
-import 'package:text_analyzer/global/text_analysis.dart';
-import 'package:text_analyzer/screens/sentiment/sentiment_screen.dart';
-import 'package:text_analyzer/screens/summary/summary_screen.dart';
+import '../../../global/text_analysis.dart';
+import '../../sentiment/sentiment_screen.dart';
+import '../../summary/summary_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OcrTextWidget extends StatelessWidget {
